@@ -1,0 +1,48 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+header {
+	@include mixins.displayFlex(row, space-between, center);
+	padding: 2rem 0;
+	border-bottom: 2px solid black;
+	padding: 0 2rem;
+	.logo {
+		margin: 0;
+		&__container {
+			$size: 150px;
+			width: $size;
+			height: $size;
+			display: block;
+		}
+		&__img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	.nav {
+		@include mixins.displayFlex(row, space-between, center);
+		a {
+			text-decoration: none;
+			color: black;
+		}
+		&__container {
+			@include mixins.displayFlex(row, space-evenly);
+			list-style: none;
+		}
+		.menu-item {
+			font-size: 2rem;
+			font-weight: 700;
+			a {
+				display: inline-block;
+				border-bottom: 2px solid transparent;
+				transition: border variables.$standard-transition;
+				padding: 2rem;
+				&:hover,
+				&:active,
+				&:focus {
+					border-bottom: 2px solid black;
+				}
+			}
+		}
+	}
+}

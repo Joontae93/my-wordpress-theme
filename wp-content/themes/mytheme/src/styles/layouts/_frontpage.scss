@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as m;
+// @use '../abstracts/variables' as v;
+.hero {
+	.greeting {
+		align-items: stretch;
+		.subheadline {
+			font-size: 3rem;
+			max-width: 50vw;
+		}
+		.col {
+			flex: 1 1 50%;
+			&:nth-child(2) {
+				justify-content: center;
+				align-items: center;
+			}
+			figure {
+				$size: 40rem;
+				@include m.square($size);
+				@include m.fadeIn;
+				border-radius: 50%;
+				overflow: hidden;
+				img {
+					@include m.square(100%);
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}

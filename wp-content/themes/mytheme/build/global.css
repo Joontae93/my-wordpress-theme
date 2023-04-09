@@ -1,0 +1,435 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/styles/main.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/styles/main.scss (1) ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
+/*
+* MIXINS
+*/
+/*
+Desktop - 1200px
+Laptop - 979px
+Tablet - 767px
+iPhone - 480px
+Tiny - 320px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+html body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+html body main,
+html body .the-content {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+html body a {
+  text-decoration: none;
+}
+html body section {
+  padding: 6.5rem 0;
+  display: block;
+}
+html body .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+html body .col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", serif;
+}
+
+.headline {
+  margin-top: 4rem;
+}
+
+.subheadline {
+  margin-top: 2rem;
+  font-family: "Lusitana", sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.8em;
+}
+
+p,
+span,
+.text-content {
+  font-family: "Lusitana", sans-serif;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+ul {
+  margin-left: 1.8rem;
+}
+ul li {
+  font-family: "Lusitana", sans-serif;
+}
+ul:not(li ul) {
+  margin-bottom: 2rem;
+}
+
+.nav ul {
+  margin: 0;
+}
+.nav ul li a {
+  font-family: "Raleway", serif;
+  font-size: 1.1em;
+}
+
+@media screen and (min-width: 1200px) {
+  html body {
+    font-size: 2rem;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 2px solid black;
+  padding: 0 2rem;
+}
+header .logo {
+  margin: 0;
+}
+header .logo__container {
+  width: 150px;
+  height: 150px;
+  display: block;
+}
+header .logo__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav a {
+  text-decoration: none;
+  color: black;
+}
+header .nav__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  list-style: none;
+}
+header .nav .menu-item {
+  font-size: 2rem;
+  font-weight: 700;
+}
+header .nav .menu-item a {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease;
+  padding: 2rem;
+}
+header .nav .menu-item a:hover, header .nav .menu-item a:active, header .nav .menu-item a:focus {
+  border-bottom: 2px solid black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer #copyright {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6.5rem 0;
+}
+footer #copyright p {
+  text-align: center;
+}
+
+.hero .greeting {
+  align-items: stretch;
+}
+.hero .greeting .subheadline {
+  font-size: 3rem;
+  max-width: 50vw;
+}
+.hero .greeting .col {
+  flex: 1 1 50%;
+}
+.hero .greeting .col:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+.hero .greeting .col figure {
+  width: 40rem;
+  height: 40rem;
+  animation: fadeInAnimation ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-radius: 50%;
+  overflow: hidden;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero .greeting .col figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .header {
+  padding: 6.5rem 0;
+  border-bottom: 2px solid black;
+}
+.about .header .headline {
+  font-size: calc(4.8rem + 1vw);
+}
+.about .header .subheadline {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.about .faq {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 6.5rem;
+}
+.about .faq__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about .faq__question {
+  margin-top: 6rem;
+}
+.about .faq__answer {
+  margin-top: 1rem;
+}
+
+.sidebar {
+  flex: 1 1 calc(40% - 2rem);
+  position: sticky;
+  top: 20%;
+  background-color: white;
+  border: 2px solid #545454;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 1rem 1rem #007aeb;
+}
+@media only screen and (max-width: 766.02px) {
+  .sidebar {
+    position: relative;
+  }
+}
+@media only screen and (max-width: md) {
+  .sidebar {
+    position: relative;
+  }
+}
+.sidebar__header {
+  margin-bottom: 2rem;
+  color: #007aeb;
+}
+.sidebar ul li a {
+  color: black;
+  font-family: "Raleway", serif;
+  font-weight: 700;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.single:not(body) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+  margin: 4rem auto;
+}
+@media only screen and (max-width: iPhone) {
+  .single:not(body) {
+    display: block;
+  }
+}
+.single:not(body) .the-post {
+  flex: 1 1 calc(60% - 4rem);
+  max-width: 700px;
+}
+.single:not(body) .the-post__featured-image {
+  max-width: 50vw;
+}
+.single:not(body) .the-post__featured-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.single:not(body) .the-post__headline {
+  color: #007aeb;
+}
+
+.post-card {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  flex: 1 1 28rem;
+  cursor: pointer;
+}
+.post-card:hover, .post-card:active, .post-card:focus {
+  background-color: black;
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 4px black;
+}
+.post-card:hover a, .post-card:active a, .post-card:focus a {
+  color: white;
+}
+.post-card__container {
+  margin: 6.5rem 0;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.post-card__container li {
+  height: 40rem;
+}
+.post-card__title {
+  font-size: 3.2rem;
+}
+.post-card__excerpt {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+pre.wp-block-verse {
+  border: 1px solid black;
+  padding: 1rem;
+  font-family: monospace;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+button,
+.btn,
+.btn__fill,
+.btn__outline {
+  border: 2px solid transparent;
+  border-radius: 10rem;
+  padding: 0.5rem 2rem;
+  font-family: "Raleway", serif;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 2rem 2rem 0 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+.btn__fill:hover,
+.btn__outline:hover {
+  box-shadow: 4px 8px #007aeb;
+  transform: translateY(-4px);
+}
+
+.btn__text {
+  margin: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+.btn__fill, .btn__outline {
+  background-color: #007aeb;
+}
+.btn__fill .btn__text, .btn__outline .btn__text {
+  color: white;
+}
+.btn__fill:hover, .btn__outline:hover {
+  background-color: white;
+  border-color: #007aeb;
+}
+.btn__fill:hover .btn__text, .btn__outline:hover .btn__text {
+  color: #007aeb;
+}
+.btn__outline {
+  border-color: #007aeb;
+  background-color: white;
+}
+.btn__outline .btn__text {
+  color: #007aeb;
+}
+.btn__outline:hover {
+  background-color: #007aeb;
+  box-shadow: 4px 8px black;
+}
+.btn__outline:hover .btn__text {
+  color: white;
+}
+
+/*# sourceMappingURL=global.css.map*/

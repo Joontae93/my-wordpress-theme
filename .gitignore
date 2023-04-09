@@ -20,7 +20,7 @@
 # Configuration
 wp-config.php
 /.vscode
-loacl-xdebuginfo.php
+local-xdebuginfo.php
 
 # More
 /node_modules
