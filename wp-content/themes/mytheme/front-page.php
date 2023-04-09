@@ -4,7 +4,7 @@
  *  The Front Page
  * 
  */
-
+enqueue_page_style('frontPage');
 get_header() ?>
 <main class="container">
     <section class="hero">

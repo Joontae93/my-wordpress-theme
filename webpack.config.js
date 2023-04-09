@@ -15,7 +15,7 @@ function snakeToCamel(str) {
 }
 
 const appNames = []; // for jsx
-const styleSheets = ['about']; // for scss only
+const styleSheets = ['about-me', 'front-page']; // for scss only
 module.exports = {
 	...defaultConfig,
 	...{

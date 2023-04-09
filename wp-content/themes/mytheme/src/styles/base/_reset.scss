@@ -24,7 +24,7 @@ html {
 			text-decoration: none;
 		}
 		section {
-			padding: 6.5rem 0;
+			padding: 3.5rem 0;
 			display: block;
 		}
 		.row {
@@ -34,5 +34,15 @@ html {
 		.col {
 			@include m.displayFlex(column, flex-start, stretch);
 		}
+	}
+}
+figure {
+	$size: 40rem;
+	@include m.square($size);
+	@include m.fadeIn;
+	overflow: hidden;
+	img {
+		@include m.square(100%);
+		object-fit: cover;
 	}
 }

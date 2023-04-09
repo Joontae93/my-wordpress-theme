@@ -12,14 +12,14 @@ get_header();
 
 ?>
 <main class="single">
-    <article id="post-<?php the_ID(); ?>" <?php post_class("the-post"); ?>>
-        <figure class="the-post__featured-image">
-            <? the_post_thumbnail() ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(array("the-post", 'container')); ?>>
+        <figure class="the-post__featured-image w-100 h-100">
+            <?php the_post_thumbnail() ?>
         </figure>
         <h1 class="headline the-post__headline">
-            <? the_title() ?>
+            <?php the_title() ?>
         </h1>
-        <? the_content() ?>
+        <?php the_content() ?>
     </article>
 </main>
 <? get_footer() ?>

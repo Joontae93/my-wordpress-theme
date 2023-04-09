@@ -1,7 +1,7 @@
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 
-.about {
+.the-content:where(#about) {
 	.header {
 		padding: 6.5rem 0;
 		border-bottom: 2px solid black;
@@ -24,6 +24,17 @@
 		}
 		&__answer {
 			margin-top: 1rem;
+		}
+	}
+}
+
+#bio {
+	figure {
+		height: 100%;
+		width: 100%;
+		img {
+			height: 100%;
+			width: 100%;
 		}
 	}
 }

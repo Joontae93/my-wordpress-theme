@@ -6,37 +6,34 @@
  * @since 1.0
  */
 
-enqueue_page_style('about');
+enqueue_page_style('aboutMe');
 get_header();
 ?>
-<article class="the-content" id="about">
+<article class="the-content container" id="about">
     <section class="header">
         <h1 class="headline">About Me</h1>
     </section>
     <section id="bio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <figure class='headshot'>
-                        <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/01/headshot-v2.jpg"; ?>" alt="" srcset="">
-                    </figure>
-                </div>
-                <div class="col-lg-6 text-content">
-                    <p>K.J. Roelke (he/him) is a Korean adoptee and creative raised in Dallas, Texas. With an undergraduate degree in Worship Arts, he has spent the majority of his life
-                        exploring
-                        how technology and the arts can help build bridges and bring people together with a sense of awe and fun.
-                    </p>
-                    <p>
-                        He is a multi-medium creator and podcast host who does his best to keep things humorous and approachable. His work focuses on intersectionality and “gray areas” that
-                        encourage audiences to grow in empathy and compassion for their fellow human being.
-                    </p>
-                    <p>
-                        KJ's previous roles include Worship & Creative Director and Communications Director, and he currently a full-time web developer with the Choctaw Nation of Oklahoma.
-                    </p>
-                </div>
+        <div class="row flex-row-reverse">
+            <div class="col-lg-6">
+                <figure class='headshot'>
+                    <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/01/headshot-v2.jpg"; ?>" alt="" srcset="">
+                </figure>
+            </div>
+            <div class="col-lg-6 text-content">
+                <p>K.J. Roelke (he/him) is a Korean adoptee and creative raised in Dallas, Texas. With an undergraduate degree in Worship Arts, he has spent the majority of his life
+                    exploring
+                    how technology and the arts can help build bridges and bring people together with a sense of awe and fun.
+                </p>
+                <p>
+                    He is a multi-medium creator and podcast host who does his best to keep things humorous and approachable. His work focuses on intersectionality and “gray areas” that
+                    encourage audiences to grow in empathy and compassion for their fellow human being.
+                </p>
+                <p>
+                    KJ's previous roles include Worship & Creative Director and Communications Director, and he currently a full-time web developer with the Choctaw Nation of Oklahoma.
+                </p>
             </div>
         </div>
-
     </section>
     <section id="faq" class="faq">
         <h2 class="headline">Some FAQs</h2>
