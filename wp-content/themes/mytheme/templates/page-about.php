@@ -1,13 +1,25 @@
-<? get_header() ?>
-<article class="the-content about">
+<?php
+
+/**
+ * The About Page
+ * 
+ * @since 1.0
+ */
+
+enqueue_page_style('about');
+get_header();
+?>
+<article class="the-content" id="about">
     <section class="header">
-        <h1 class="headline">About Me.</h1>
+        <h1 class="headline">About Me</h1>
     </section>
-    <section class="bio">
+    <section id="bio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <figure><img src="<?php echo get_site_url() . "/wp-content/uploads/2021/01/headshot-v2.jpg"; ?>" alt="" srcset=""></figure>
+                    <figure class='headshot'>
+                        <img src="<?php echo get_site_url() . "/wp-content/uploads/2021/01/headshot-v2.jpg"; ?>" alt="" srcset="">
+                    </figure>
                 </div>
                 <div class="col-lg-6 text-content">
                     <p>K.J. Roelke (he/him) is a Korean adoptee and creative raised in Dallas, Texas. With an undergraduate degree in Worship Arts, he has spent the majority of his life
@@ -46,4 +58,4 @@
         </div>
     </section>
 </article>
-<? get_footer() ?>
+<?php get_footer() ?>

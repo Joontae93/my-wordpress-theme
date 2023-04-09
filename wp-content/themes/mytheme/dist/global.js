@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/utilities.js":
-/*!**********************************!*\
-  !*** ./src/modules/utilities.js ***!
-  \**********************************/
+/***/ "./wp-content/themes/mytheme/src/modules/utilities.js":
+/*!************************************************************!*\
+  !*** ./wp-content/themes/mytheme/src/modules/utilities.js ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -24,10 +24,10 @@ function select(selector) {
 
 /***/ }),
 
-/***/ "./src/styles/main.scss":
-/*!******************************!*\
-  !*** ./src/styles/main.scss ***!
-  \******************************/
+/***/ "./wp-content/themes/mytheme/src/styles/main.scss":
+/*!********************************************************!*\
+  !*** ./wp-content/themes/mytheme/src/styles/main.scss ***!
+  \********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -95,12 +95,12 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/*!************************************************!*\
+  !*** ./wp-content/themes/mytheme/src/index.js ***!
+  \************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _modules_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/utilities */ "./src/modules/utilities.js");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./wp-content/themes/mytheme/src/styles/main.scss");
+/* harmony import */ var _modules_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/utilities */ "./wp-content/themes/mytheme/src/modules/utilities.js");
 
 
 console.log('hello from global.js');

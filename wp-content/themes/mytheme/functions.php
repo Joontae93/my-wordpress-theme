@@ -3,18 +3,7 @@
 require_once get_template_directory() . '/includes/cpts.php';
 require_once get_template_directory() . '/includes/theme.php';
 
-/** Styles 'n' Scripts */
-function enqueue_styles() {
-    $dir = get_stylesheet_directory();
-    wp_enqueue_style('kj-Styles', get_stylesheet_directory_uri() . '/build/global.css', array(), filemtime(get_stylesheet_directory() . '/build/global.css'));
-    wp_enqueue_script('kj-data', get_stylesheet_directory_uri() . '/build/global.js', array(), filemtime(get_stylesheet_directory() . '/build/global.js'), true);
-    wp_localize_script('kj-data', 'myData', array(
-        'root_url' => get_site_url(),
-        'day' => date('D'),
-        'year' => date('Y')
-    ));
-}
-add_action('wp_enqueue_scripts', 'enqueue_styles');
+
 
 define('WPSE_PAGE_TEMPLATE_SUB_DIR', 'templates');
 
