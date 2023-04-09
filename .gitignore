@@ -19,6 +19,12 @@
 
 # Configuration
 wp-config.php
+/.vscode
+loacl-xdebuginfo.php
+
+# More
+/node_modules
+/vendor
 
 # WP-Content
 /wp-content/themes/twenty*/
@@ -32,13 +38,4 @@ wp-config.php
 /.htaccess
 
 # All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
 #/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
