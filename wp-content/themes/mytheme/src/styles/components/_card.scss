@@ -3,10 +3,8 @@
 .post-card {
 	border: 2px solid black;
 	border-radius: 1rem;
-	padding: 2rem;
 	background-color: white;
-	transition: all 0.3s ease;
-	flex: 1 1 28rem;
+	transition: mixins.transition((box-shadow, background-color, transform));
 	cursor: pointer;
 	&:hover,
 	&:active,
@@ -14,25 +12,42 @@
 		background-color: black;
 		transform: translateY(-5px);
 		box-shadow: 2px 2px 4px black;
-		a {
-			color: white;
+		.post {
+			&__excerpt {
+				color: white;
+			}
+			&__title {
+				color: white;
+			}
 		}
 	}
 	&__container {
 		margin: 6.5rem 0;
 		position: relative;
 		list-style: none;
-		@include mixins.displayFlex(row, space-around);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 36rem);
 		gap: 2rem;
-		& li {
-			height: 40rem;
-		}
 	}
+	&__link {
+		height: 100%;
+		width: 100%;
+		display: block;
+		padding: 2rem;
+	}
+}
+.post {
+	display: block;
+	height: 100%;
+	width: 100%;
 	&__title {
+		transition: mixins.transition(color);
 		font-size: 3.2rem;
 	}
 	&__excerpt {
 		margin-top: 2rem;
 		font-size: 1.8rem;
+		color: black;
+		transition: mixins.transition(color);
 	}
 }

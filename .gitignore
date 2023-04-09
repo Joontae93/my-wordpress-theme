@@ -31,6 +31,8 @@ local-xdebuginfo.php
 /wp-content/themes/twenty*/
 /wp-content/upgrade/
 /wp-content/uploads/
+/wp-content/plugins/
+/wp-content/mu-plugins/
 
 # Log files
 *.log

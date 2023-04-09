@@ -8,18 +8,21 @@
 	display: inline-block;
 	font-size: 1.2em;
 	margin: 2rem 2rem 0 0;
-	transition: m.transition((background-color, transform));
+	transition: m.transition(
+		(background-color, transform, box-shadow, border-color)
+	);
 	width: initial;
 }
-button,
+button {
+	@extend %btn;
+}
 .btn {
 	@extend %btn;
 	&:hover {
 		box-shadow: 4px 8px v.$color-primary;
 		transform: translateY(-4px);
 	}
-}
-.btn {
+
 	&__text {
 		margin: 1rem;
 		display: inline-block;

@@ -31,7 +31,6 @@ function enqueue_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 function enqueue_page_style(string $id, array $deps = array('main')) {
-
     $src = get_stylesheet_directory_uri() . "/dist/{$id}.css";
     wp_enqueue_style($id, $src, $deps, false);
 }
