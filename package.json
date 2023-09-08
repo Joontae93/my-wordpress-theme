@@ -1,18 +1,20 @@
 {
-  "name": "my-wordpress-theme",
-  "version": "1.0.0",
-  "description": "My custom wordpress theme for my personal site",
-  "main": "wp-content/themes/mytheme/src/index.js",
-  "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build"
-  },
-  "author": "KJ Roelke",
-  "license": "ISC",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "@wordpress/scripts": "^26.1.0",
-    "bootstrap": "^5.2.3",
-    "webpack-bundle-analyzer": "^4.8.0"
-  }
+	"name": "my-wordpress-theme",
+	"version": "1.0.0",
+	"description": "My custom wordpress theme for my personal site",
+	"main": "wp-content/themes/mytheme/src/index.js",
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"author": "KJ Roelke",
+	"license": "ISC",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.4.0",
+		"@wordpress/scripts": "^26.12.0",
+		"bootstrap": "^5.2.3",
+		"webpack-bundle-analyzer": "^4.8.0"
+	}
 }
