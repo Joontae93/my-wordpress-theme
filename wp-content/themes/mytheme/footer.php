@@ -1,11 +1,19 @@
+<?php
+/**
+ * Footer Template
+ *
+ * @package KJRoelke
+ */
+
+?>
 <footer>
-    <div id="copyright">
-        <p>&copy;
-            <? echo date('Y') ?> K.J. Roelke <br /> All Rights Reserved.
-        </p>
-    </div>
+	<div id="copyright">
+		<p>&copy;
+			<?php echo gmdate( 'Y' ); ?> K.J. Roelke <br /> All Rights Reserved.
+		</p>
+	</div>
 </footer>
-<? wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 
 </html>

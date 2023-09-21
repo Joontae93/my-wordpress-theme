@@ -1,6 +1,6 @@
 {
 	"name": "my-wordpress-theme",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "My custom wordpress theme for my personal site",
 	"main": "wp-content/themes/mytheme/src/index.js",
 	"scripts": {
