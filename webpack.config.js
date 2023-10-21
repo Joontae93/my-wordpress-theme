@@ -15,13 +15,14 @@ function snakeToCamel(str) {
 }
 
 const appNames = []; // for jsx
-const styleSheets = ['front-page']; // for scss only
+const styleSheets = []; // for scss only
 module.exports = {
 	...defaultConfig,
 	...{
 		entry: function () {
 			const entries = {
 				global: `.${THEME_DIR}/src/index.js`,
+				bootstrap: `.${THEME_DIR}/src/js/vendors/bootstrap.js`,
 			};
 
 			if (appNames.length > 0) {
@@ -34,7 +35,7 @@ module.exports = {
 				styleSheets.forEach((styleSheet) => {
 					const styleSheetOutput = snakeToCamel(styleSheet);
 					entries[
-						styleSheetOutput
+						`pages/${styleSheetOutput}`
 					] = `.${THEME_DIR}/src/styles/pages/${styleSheet}.scss`;
 				});
 			}
@@ -46,12 +47,12 @@ module.exports = {
 			filename: `[name].js`,
 		},
 	},
-	plugins: [
-		...defaultConfig.plugins,
-		new BundleAnalyzerPlugin({
-			analyzerMode: 'static',
-			reportFilename: path.join(__dirname, 'bundle-analyzer', 'report.html'),
-			openAnalyzer: false,
-		}),
-	],
+	// plugins: [
+	// 	...defaultConfig.plugins,
+	// 	new BundleAnalyzerPlugin({
+	// 		analyzerMode: 'static',
+	// 		reportFilename: path.join(__dirname, 'bundle-analyzer', 'report.html'),
+	// 		openAnalyzer: false,
+	// 	}),
+	// ],
 };
