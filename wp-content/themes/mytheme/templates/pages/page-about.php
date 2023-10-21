@@ -6,7 +6,7 @@
  * @package KJRoelke
  */
 
-enqueue_page_style( 'aboutMe' ); ?>
-
-<?php
-the_content();
+?>
+<div class="container">
+	<?php the_content(); ?>
+</div>

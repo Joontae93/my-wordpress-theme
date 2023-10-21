@@ -63,7 +63,7 @@ class Asset_Loader {
 	 * @param array           $deps [optional] Dependencies (if any)
 	 * @param array           $js_load_strategy JS Strategy array (if $load_type === 'script')
 	 */
-	public function __construct( string $id, Asset_Load_Type $load_type, string $folder = '', array $deps = array(), $js_load_strategy = array( 'strategy' => 'defer' ) ) {
+	public function __construct( string $id, Asset_Load_Type $load_type, string $folder = '', array $deps = array(), $js_load_strategy = array( 'strategy' => 'defer' ), $enqueue = true ) {
 		$this->id         = $id;
 		$this->folder     = $folder;
 		$this->location   = empty( $this->folder ) ? "/dist/{$this->id}" : "/dist/{$this->folder}/{$this->id}";
@@ -78,14 +78,14 @@ class Asset_Loader {
 
 		switch ( $load_type ) {
 			case Asset_Load_Type::style:
-				$this->enqueue_page_style();
+				$this->enqueue_page_style( $enqueue );
 				break;
 			case Asset_Load_Type::script:
-				$this->enqueue_page_script( $js_load_strategy );
+				$this->enqueue_page_script( $js_load_strategy, $enqueue );
 				break;
 			case Asset_Load_Type::both:
-				$this->enqueue_page_style();
-				$this->enqueue_page_script( $js_load_strategy );
+				$this->enqueue_page_style( $enqueue );
+				$this->enqueue_page_script( $js_load_strategy, $enqueue );
 				break;
 		}
 	}
@@ -110,31 +110,59 @@ class Asset_Loader {
 		}
 		return $deps;
 	}
+
 	/**
 	 * Enqueue Page Style
+	 *
+	 * @param bool $enqueue whether to enqueue or register
 	 */
-	private function enqueue_page_style() {
+	private function enqueue_page_style( bool $enqueue ) {
 		$src     = get_stylesheet_directory_uri() . $this->location . '.css';
 		$version = $this->version;
-		wp_enqueue_style(
-			$this->id,
-			$src,
-			$this->deps,
-			$version,
-			false
-		);
+		if ( $enqueue ) {
+			wp_enqueue_style(
+				$this->id,
+				$src,
+				$this->deps,
+				$version,
+				false
+			);
+		} else {
+			wp_register_style(
+				$this->id,
+				$src,
+				$this->deps,
+				$version,
+				false
+			);
+		}
 	}
 
-	/** Enqueue Page Script */
-	private function enqueue_page_script( $js_load_strategy ) {
+	/** Enqueue Page Script
+	 *
+	 * @param array $js_load_strategy the Load strategy
+	 * @param bool  $enqueue whether to enqueue or register
+	 */
+	private function enqueue_page_script( array $js_load_strategy, bool $enqueue ) {
 		$src     = get_stylesheet_directory_uri() . $this->location . '.js';
 		$version = $this->version;
-		wp_enqueue_script(
-			$this->id,
-			$src,
-			$this->deps,
-			$version,
-			$js_load_strategy
-		);
+		if ( $enqueue ) {
+
+			wp_enqueue_script(
+				$this->id,
+				$src,
+				$this->deps,
+				$version,
+				$js_load_strategy
+			);
+		} else {
+			wp_register_script(
+				$this->id,
+				$src,
+				$this->deps,
+				$version,
+				$js_load_strategy
+			);
+		}
 	}
 }

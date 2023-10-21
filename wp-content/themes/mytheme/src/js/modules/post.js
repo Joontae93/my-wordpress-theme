@@ -1,3 +1,4 @@
+import '../../styles/pages/posts.scss';
 class Post {
 	#theSidebarMarkup = `<aside class="sidebar">
         	<h3 class="sidebar__header">In This article:</h3>

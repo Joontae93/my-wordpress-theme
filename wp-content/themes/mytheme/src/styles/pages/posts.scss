@@ -2,12 +2,12 @@
 @use '../abstracts/mixins' as m;
 @use '../components/post-sidebar';
 .single:not(body) {
-	// @include m.displayFlex();
+	@include m.displayFlex();
 	gap: 4rem;
 	margin: 4rem auto;
-	// @include m.respond(iPhone) {
-	// 	display: block;
-	// }
+	@include m.respond(iPhone) {
+		display: block;
+	}
 	.the-post {
 		max-width: 700px;
 		&__featured-image {

@@ -9,38 +9,17 @@
 
 html {
 	font-size: 62.5%;
-
-	body {
-		box-sizing: border-box;
-		font-size: 1.6rem;
-
-		main,
-		.the-content {
-			width: 88%;
-			max-width: 1200px;
-			margin: 0 auto;
-		}
-		a {
-			text-decoration: none;
-		}
-		section {
-			padding: 3.5rem 0;
-			display: block;
-		}
-		.row {
-			@include m.displayFlex;
-			width: 100%;
-		}
-		.col {
-			@include m.displayFlex(column, flex-start, stretch);
-		}
+	section {
+		padding: 3.5rem 0;
 	}
 }
+
 figure {
 	$size: 40rem;
 	@include m.square($size);
 	@include m.fadeIn;
 	overflow: hidden;
+
 	img {
 		@include m.square(100%);
 		object-fit: cover;

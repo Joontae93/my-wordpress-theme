@@ -60,7 +60,7 @@ function kjr_enqueue_page_assets( string $id, string $folder = '', array $deps =
  * @param bool   $is_external whether or not the link is external
  * @return string the markup
  */
-function button(
+function kjr_button(
 	string $cta,
 	string $style,
 	string $href,

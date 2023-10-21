@@ -48,5 +48,7 @@ class Theme_Builder {
 			null,
 		);
 		$bootstrap = new Asset_Loader( 'bootstrap', Asset_Load_Type::both, 'vendors' );
+
+		$postJS = new Asset_Loader( 'postJS', Asset_Load_Type::both, '', array( 'global' ), array( 'strategy' => 'defer' ), false );
 	}
 }

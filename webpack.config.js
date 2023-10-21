@@ -1,5 +1,3 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const path = require('path');
 /**
  * WordPress Dependencies
  */
@@ -22,7 +20,8 @@ module.exports = {
 		entry: function () {
 			const entries = {
 				global: `.${THEME_DIR}/src/index.js`,
-				bootstrap: `.${THEME_DIR}/src/js/vendors/bootstrap.js`,
+				'vendors/bootstrap': `.${THEME_DIR}/src/js/vendors/bootstrap.js`,
+				postJS: `.${THEME_DIR}/src/js/modules/post.js`,
 			};
 
 			if (appNames.length > 0) {
