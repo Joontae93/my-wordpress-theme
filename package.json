@@ -3,6 +3,10 @@
 	"version": "2.0.1",
 	"description": "My custom wordpress theme for my personal site",
 	"main": "wp-content/themes/mytheme/src/index.js",
+	"prettier": "@wordpress/prettier-config",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
 	"scripts": {
 		"start": "wp-scripts start",
 		"build": "wp-scripts build",

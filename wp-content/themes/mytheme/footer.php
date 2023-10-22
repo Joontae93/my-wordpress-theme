@@ -6,7 +6,7 @@
  */
 
 ?>
-<footer>
+<footer class='footer'>
 	<div id="copyright">
 		<p>&copy;
 			<?php echo gmdate( 'Y' ); ?> K.J. Roelke <br /> All Rights Reserved.
