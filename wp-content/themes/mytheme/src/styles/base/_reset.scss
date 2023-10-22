@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as m;
+@use "../abstracts/mixins" as m;
 *,
 *::after,
 *::before {
@@ -8,7 +8,6 @@
 }
 
 html {
-	font-size: 62.5%;
 	section {
 		padding: 3.5rem 0;
 	}

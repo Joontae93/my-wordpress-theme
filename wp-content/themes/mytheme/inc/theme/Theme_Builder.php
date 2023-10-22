@@ -19,6 +19,8 @@ class Theme_Builder {
 	public function add_theme_supports() {
 		add_theme_support( 'post-formats', array( 'link', 'standard', 'video', 'audio' ) );
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'wp-block-styles' );
 		register_nav_menus(
 			array(
 				'primary-menu' => 'The Primary Nav',
@@ -41,9 +43,10 @@ class Theme_Builder {
 				'year'     => gmdate( 'Y', time() ),
 			)
 		);
+
 		wp_enqueue_style(
 			'google-fonts',
-			'https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
+			'https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap',
 			array(),
 			null,
 		);

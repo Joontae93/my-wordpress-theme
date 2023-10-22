@@ -9,6 +9,6 @@
 get_header();
 ?>
 <article class="the-content py-5">
-	<?php get_template_part( 'templates/pages/page', $post->post_name ); ?>
+	<?php get_template_part( 'template-parts/page', $post->post_name ); ?>
 </article>
 <?php get_footer(); ?>
